@@ -14,6 +14,37 @@ body {
   box-sizing: border-box;
 }
 
+footer {
+  width: 100%;
+  height: 10rem;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+footer h4 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding-right: 1rem;
+  padding-top: 40 40px;
+  align-items: center;
+}
+footer p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  padding-left: 80px;
+}
+footer p i {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+  padding-bottom: 30 30px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -509,6 +540,10 @@ body {
 }
 .navigation .bar:hover {
   background: #028c6a;
+}
+
+#r1:checked ~ .s1 {
+  margin-left: 0;
 }
 
 #r2:checked ~ .s1 {
