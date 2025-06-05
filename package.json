@@ -1,0 +1,24 @@
+{
+  "name": "7cars",
+  "version": "1.0.0",
+  "description": "The world's best luxury cars dealer",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.comp.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver compile:sass -w"
+  },
+  "keywords": [
+    "7cars"
+  ],
+  "author": "Curve Metric",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.83.0"
+  },
+  "dependencies": {
+    "node": "^24.0.1"
+  }
+}

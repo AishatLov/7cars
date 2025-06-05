@@ -1,0 +1,13 @@
+@mixin twoColorGradientText($gradient-first-color, $gradient-second-color) {
+    background: -webkit-linear-gradient($gradient-first-color, $gradient-second-color);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin clearfix{
+    &::after{
+        content: "";
+        clear: both;
+        display: table ;
+    }
+}

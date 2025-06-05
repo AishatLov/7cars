@@ -1,0 +1,87 @@
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+
+    .radio{
+        position: absolute;;
+    }
+
+    &__slide{
+        width: 20%;
+        position: relative;
+        overflow: hidden;
+        transition: .6s;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        &--text{
+            position: absolute;
+            top: 5%;
+            left: 3%;
+            padding: 0 1rem;
+
+            p{
+                font-size: 5rem;
+                font-weight: 800;
+                @include twoColorGradientText($color-green, $color-blue);
+
+            }
+
+            &-icons{
+                position: absolute;
+                top: 5%;
+                left: 3%;
+                background-color: $color-white;
+                padding: 0 1rem;
+
+                span{
+                    font-size: 2rem;
+                    margin-right: 1.3rem;
+                    @include twoColorGradientText($color-green, $color-blue);
+                }
+           
+            }
+        
+        }
+    }
+}
+
+.navigation{
+    position: absolute;
+    bottom: -20%;
+    right: 2%;
+    display: flex;
+    writing-mode: vertical-rl;
+
+    .bar{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid $color-larchmere;
+        margin: 5px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover{
+            background: $color-observatory;
+        }
+    }
+    
+}
+
+#r1:checked {
+
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -20%;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: -40%;
+}
