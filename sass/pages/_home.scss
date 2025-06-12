@@ -1,4 +1,5 @@
-.section__slide{
+.section__slide,
+.section__racing-nature{
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -11,4 +12,26 @@
 
 .section__models{
     padding: 5rem 0;
+}
+
+.section__racing-nature{
+    padding: 4rem 0 6rem 0;
+    .slides{
+        &__slide{
+            &--text{
+                p{
+                    @include twoColorGradientText($color-racing-pink, $color-racing-yellow);
+                }
+                &-icons{
+                    top: 85%;
+                    background-color: none;
+                    span{
+                        @include twoColorGradientText($color-racing-pink, $color-racing-yellow);
+                    }
+                }
+            }
+
+        }
+    }
+
 }

@@ -24,7 +24,8 @@
             position: absolute;
             top: 5%;
             left: 3%;
-            padding: 0 1rem;
+            padding: 0 3rem;
+            background: none;
 
             p{
                 font-size: 5rem;
@@ -35,10 +36,12 @@
 
             &-icons{
                 position: absolute;
-                top: 5%;
+                top: 18%;
                 left: 3%;
                 background-color: $color-white;
-                padding: 0 1rem;
+                padding: 2rem 4rem 2rem 2rem;
+                margin: auto;
+                border-radius: 3px;
 
                 span{
                     font-size: 2rem;
@@ -74,7 +77,8 @@
     
 }
 
-#r1:checked ~ .s1 {
+#r1:checked ~ .s1,
+#racing-nature-1:checked ~ .s1 {
     margin-left: 0;
 
 }
@@ -85,4 +89,43 @@
 
 #r3:checked ~ .s1 {
     margin-left: -40%;
+}
+
+.racing-nav {
+    position: absolute;
+    bottom: 50%;
+    right: 4%;
+    display: flex;
+    writing-mode: vertical-rl;
+
+     .bar{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid $color-larchmere;
+        margin: 5px;
+        cursor: pointer;
+        transition: .4s;
+        background-color: aquamarine;
+        &:hover{
+            background: $color-observatory;
+        }
+    }
+    
+}
+
+#racing-nature-1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#racing-nature-2:checked ~ .s1 {
+    margin-left: -20%;
+}
+
+#racing-nature-3:checked ~ .s1 {
+    margin-left: -40%;
+}
+
+#racing-nature-4:checked ~ .s1 {
+    margin-left: -60%;
 }

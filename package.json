@@ -6,7 +6,7 @@
   "scripts": {
     "compile:sass": "sass sass/main.scss css/style.comp.css -w",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver compile:sass -w"
+    "start": "npm-run-all --parallel devserver compile:sass"
   },
   "keywords": [
     "7cars"

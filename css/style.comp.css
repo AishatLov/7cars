@@ -339,7 +339,7 @@ body {
   margin-right: 6rem;
 }
 .row .col-1-of-2 {
-  width: calc((100% - 6rem) / 2);
+  width: calc((100% - 1 * 6rem) / 2);
 }
 .row .col-1-of-3 {
   width: calc((100% - 2 * 6rem) / 3);
@@ -498,7 +498,8 @@ body {
   position: absolute;
   top: 5%;
   left: 3%;
-  padding: 0 1rem;
+  padding: 0 3rem;
+  background: none;
 }
 .slides__slide--text p {
   font-size: 5rem;
@@ -509,10 +510,12 @@ body {
 }
 .slides__slide--text-icons {
   position: absolute;
-  top: 5%;
+  top: 18%;
   left: 3%;
   background-color: #fff;
-  padding: 0 1rem;
+  padding: 2rem 4rem 2rem 2rem;
+  margin: auto;
+  border-radius: 3px;
 }
 .slides__slide--text-icons span {
   font-size: 2rem;
@@ -542,7 +545,8 @@ body {
   background: #028c6a;
 }
 
-#r1:checked ~ .s1 {
+#r1:checked ~ .s1,
+#racing-nature-1:checked ~ .s1 {
   margin-left: 0;
 }
 
@@ -554,7 +558,45 @@ body {
   margin-left: -40%;
 }
 
-.section__slide {
+.racing-nav {
+  position: absolute;
+  bottom: 50%;
+  right: 4%;
+  display: flex;
+  writing-mode: vertical-rl;
+}
+.racing-nav .bar {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #7bc5ae;
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: aquamarine;
+}
+.racing-nav .bar:hover {
+  background: #028c6a;
+}
+
+#racing-nature-1:checked ~ .s1 {
+  margin-left: 0;
+}
+
+#racing-nature-2:checked ~ .s1 {
+  margin-left: -20%;
+}
+
+#racing-nature-3:checked ~ .s1 {
+  margin-left: -40%;
+}
+
+#racing-nature-4:checked ~ .s1 {
+  margin-left: -60%;
+}
+
+.section__slide,
+.section__racing-nature {
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -567,6 +609,24 @@ body {
 
 .section__models {
   padding: 5rem 0;
+}
+
+.section__racing-nature {
+  padding: 4rem 0 6rem 0;
+}
+.section__racing-nature .slides__slide--text p {
+  background: -webkit-linear-gradient(#f39f86, #e9e937);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.section__racing-nature .slides__slide--text-icons {
+  top: 85%;
+  background-color: none;
+}
+.section__racing-nature .slides__slide--text-icons span {
+  background: -webkit-linear-gradient(#f39f86, #e9e937);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .header {
