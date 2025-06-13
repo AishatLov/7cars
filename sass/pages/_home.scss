@@ -33,5 +33,53 @@
 
         }
     }
+}
 
+.section__services{
+    &--content{
+        padding: 10rem 0;        
+        background-image: linear-gradient(
+            to right bottom,
+            rgba($color-green, .8),
+            rgba($color-blue, .8) 
+        ), url(../../img/home/services/5.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin:  15rem;
+    }
+}
+
+.section__find-us{
+    padding: 5rem 0;
+    margin-bottom: 10%;
+    
+    &-next{
+        width: 80%;
+        margin: auto;
+    }
+
+    .find-us__map{
+        height: 85vh;
+        background-image: url(../../img/home/map/7.jpg);
+        background-size: cover;
+        background-position: center;
+        box-shadow: 0 2rem 3rem rgba($color-gray, 50);
+        margin-left: 5%;
+        margin-right: 5%;
+        border-radius: 0.3%;
+    }
+}
+
+.section__contact{
+    padding: 7rem 0;
+}
+
+.section__testimonials{
+    padding: 5rem 0;
+  
+
+//     .testimonial__figure--img{
+//     width: 100%;
+// }
 }
