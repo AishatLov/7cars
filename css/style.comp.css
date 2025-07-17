@@ -180,15 +180,8 @@ body {
 .btn--white:hover {
   box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.8);
 }
-.btn--white:after {
+.btn--white::after {
   background-color: #fff;
-}
-
-.row {
-  display: flex;
-  max-width: 140rem;
-  margin-bottom: 450px;
-  padding-bottom: 450px;
 }
 
 .card {
@@ -212,7 +205,6 @@ body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transition: all 0.7s;
-  padding-bottom: 3rem;
 }
 .card__side--front-image-box {
   width: 100%;
@@ -281,40 +273,17 @@ body {
 }
 .card__side--back .back-main__text {
   font-size: 2.5rem;
+  font-weight: 500;
   margin-bottom: 2rem;
 }
 .card__side--back .back-main__price {
-  font-size: 4.4rem;
+  font-size: 4.5rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
   margin-bottom: 8rem;
 }
 .card__side--back--1 {
-  background-color: rgb(132, 46, 22);
-}
-.card__side--back--2 {
-  background-color: rgb(12, 14, 148);
-}
-.card__side--back--3 {
-  background-color: rgb(75, 77, 6);
-}
-.card__side--back--4 {
-  background-color: #0b0b0a;
-}
-.card__side--back--5 {
-  background-color: rgb(72, 6, 77);
-}
-.card__side--back--6 {
-  background-color: rgb(19, 58, 56);
-}
-.card__side--back--7 {
-  background-color: rgb(49, 39, 49);
-}
-.card__side--back--8 {
-  background-color: #c46110;
-}
-.card__side--back--9 {
-  background-color: rgb(72, 6, 77);
+  background-image: linear-gradient(to right bottom, rgba(225, 25, 28, 0.85), rgba(211, 127, 135, 0.85));
 }
 .card:hover .card__side--front {
   transform: rotateY(-180deg);
@@ -406,7 +375,7 @@ body {
 }
 
 .row {
-  max-width: 140rem;
+  max-width: 116rem;
   margin: 0 auto;
 }
 .row:not(:last-child) {
@@ -418,14 +387,13 @@ body {
   display: table;
 }
 .row [class^=col-] {
-  height: 5rem;
   float: left;
 }
 .row [class^=col-]:not(:last-child) {
   margin-right: 6rem;
 }
 .row .col-1-of-2 {
-  width: calc((100% - 1 * 6rem) / 2);
+  width: calc((100% -6rem) / 2);
 }
 .row .col-1-of-3 {
   width: calc((100% - 2 * 6rem) / 3);
@@ -436,7 +404,7 @@ body {
 .row .col-2-of-3 {
   width: calc(2 * (100% - 2 * 6rem) / 3 + 6rem);
 }
-.row .col-2-of-4 {
+.row .col-2-of-3 {
   width: calc(2 * (100% - 3 * 6rem) / 4 + 6rem);
 }
 .row .col-3-of-4 {
@@ -467,15 +435,10 @@ body {
   object-fit: cover;
 }
 
-.row2 {
-  display: flex;
-  max-width: 150rem;
-  margin-bottom: 300px;
-  margin: 0 auto;
-}
-
 .models {
-  width: 190%;
+  max-width: fit-content;
+  align-content: center;
+  margin-left: 19%;
 }
 .models .model {
   float: left;
@@ -560,6 +523,80 @@ body {
 .models .model__footer .btn__model--white:hover {
   color: #26835f;
   border-color: #26835f;
+}
+
+.popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  visibility: hidden;
+  opacity: 0;
+}
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  display: table;
+}
+.popup__content--left {
+  width: 40%;
+  display: table-cell;
+}
+.popup__content--right {
+  width: 60%;
+  display: table-cell;
+  padding: 1rem 5rem;
+  vertical-align: middle;
+  position: relative;
+}
+.popup__content--right h2 {
+  margin-bottom: 2rem;
+}
+.popup__img {
+  width: 100%;
+  display: block;
+}
+.popup__text {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+.popup__buy {
+  display: inline-block;
+}
+.popup__buy .payment__services {
+  display: inline-block;
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+  transform: translateY(1rem);
+}
+.popup__buy .payment__services img {
+  width: 5rem;
+  height: auto;
+}
+.popup__buy .payment__services img:not(:last-child) {
+  margin-right: 1rem;
+}
+.popup__close:link, .popup__close:visited {
+  font-size: 4rem;
+  color: #636863;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  text-decoration: none;
+  line-height: 1;
+  transition: all 0.3s;
+}
+.popup__close:hover {
+  color: #cf1717;
 }
 
 .slides {
@@ -682,8 +719,13 @@ body {
   margin-left: -60%;
 }
 
+.services--content {
+  width: 400rem;
+  padding: 100%;
+}
+
 .service-box {
-  padding: 2.5rem;
+  padding: 0.5rem;
   font-size: 2.5rem;
   color: #266f99;
   text-align: center;
@@ -720,6 +762,7 @@ body {
 .testimonials__testimonial {
   width: 85%;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
   padding: 2rem 8rem;
 }
@@ -778,6 +821,8 @@ body {
 
 .section__models {
   padding: 5rem 0;
+  margin: none;
+  width: 250rem;
 }
 
 .section__racing-nature {

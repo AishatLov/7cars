@@ -1,13 +1,7 @@
-.row2{
-    display: flex;
-    max-width: 150rem;
-    margin-bottom: 300px;
-    margin: 0 auto;
-  
-}
-
 .models{
-    width: 190%;
+    max-width: fit-content;
+    align-content: center;
+    margin-left: 19%;
     
     
     .model{

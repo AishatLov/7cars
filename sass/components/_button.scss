@@ -62,7 +62,7 @@
         box-shadow: 0 1rem 2rem rgba($color-white, .8);
       }
 
-      &:after{
+      &::after{
         background-color: $color-white;
       }
 
