@@ -83,12 +83,18 @@
 
 }
 
-#r2:checked ~ .s1 {
+#r2:checked ~ .s1,
+#racing-nature-2:checked ~ .s1 {
     margin-left: -20%;
 }
 
-#r3:checked ~ .s1 {
+#r3:checked ~ .s1,
+#racing-nature-3:checked ~ .s1 {
     margin-left: -40%;
+}
+
+#racing-nature-4:checked ~ .s1{
+    margin-left: -60%;
 }
 
 .racing-nav {
@@ -112,20 +118,4 @@
         }
     }
     
-}
-
-#racing-nature-1:checked ~ .s1 {
-    margin-left: 0;
-}
-
-#racing-nature-2:checked ~ .s1 {
-    margin-left: -20%;
-}
-
-#racing-nature-3:checked ~ .s1 {
-    margin-left: -40%;
-}
-
-#racing-nature-4:checked ~ .s1 {
-    margin-left: -60%;
 }

@@ -25,3 +25,12 @@ body{
         text-shadow: 5rem 1rem 2rem rgba($color: $color-black, $alpha: .3);
     }
   }
+
+  ul{
+    list-style: none;
+  }
+
+  a:link,
+  a:visited{
+    text-decoration: none;
+  }

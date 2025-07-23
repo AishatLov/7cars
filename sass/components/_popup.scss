@@ -15,13 +15,13 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 75%;
+        width: 65%;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         background-color: $color-white;
         display: table;
 
         &--left{
-            width: 40%;        
+            width: 40%;      
             display: table-cell;
 
         }
@@ -29,12 +29,13 @@
          &--right{
             width: 60%;
             display: table-cell;
-            padding: 1rem 5rem;
+            padding: 1rem 3rem;
             vertical-align: middle;
             position: relative;
 
-            h2{
+            h3{
                 margin-bottom: 2rem;
+                font-size: 40px;
 
             }
         }
@@ -62,7 +63,7 @@
 
             
             img{
-                width: 5rem;
+                width: 4rem;
                 height: auto;
                 &:not(:last-child){
                     margin-right: 1rem;
@@ -88,5 +89,10 @@
                 color: $color-red;
             }
 
+        }
+
+        &:target{
+            visibility: visible;
+            opacity: 1;
         }
 }

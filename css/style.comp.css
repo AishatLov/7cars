@@ -14,37 +14,6 @@ body {
   box-sizing: border-box;
 }
 
-footer {
-  width: 100%;
-  height: 10rem;
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.6rem;
-  padding-bottom: 30px;
-  padding-top: 30px;
-}
-footer h4 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  padding-right: 1rem;
-  padding-top: 40 40px;
-  align-items: center;
-}
-footer p {
-  font-size: 1.7rem;
-  font-weight: 400;
-  padding-left: 80px;
-}
-footer p i {
-  color: #fff;
-  font-size: 2.5rem;
-  margin-left: 1rem;
-  padding-bottom: 30 30px;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -72,6 +41,15 @@ body {
 .heading-secondary:hover {
   transform: skewX(7deg);
   text-shadow: 5rem 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
 }
 
 @keyframes moveToRightWithSkew {
@@ -285,6 +263,30 @@ body {
 .card__side--back--1 {
   background-image: linear-gradient(to right bottom, rgba(225, 25, 28, 0.85), rgba(211, 127, 135, 0.85));
 }
+.card__side--back--2 {
+  background-image: linear-gradient(to right bottom, rgba(243, 139, 75, 0.85), rgba(142, 76, 24, 0.85));
+}
+.card__side--back--3 {
+  background-image: linear-gradient(to right bottom, rgba(225, 226, 230, 0.85), rgba(119, 120, 123, 0.85));
+}
+.card__side--back--4 {
+  background-image: linear-gradient(to right bottom, rgba(233, 156, 58, 0.85), rgba(211, 127, 135, 0.85));
+}
+.card__side--back--5 {
+  background-image: linear-gradient(to right bottom, rgba(41, 44, 53, 0.85), rgba(109, 114, 138, 0.85));
+}
+.card__side--back--6 {
+  background-image: linear-gradient(to right bottom, rgba(174, 161, 148, 0.85), rgba(159, 136, 113, 0.85));
+}
+.card__side--back--7 {
+  background-image: linear-gradient(to right bottom, rgba(252, 253, 252, 0.85), rgba(150, 183, 222, 0.85));
+}
+.card__side--back--8 {
+  background-image: linear-gradient(to right bottom, rgba(228, 228, 231, 0.85), rgba(79, 82, 88, 0.85));
+}
+.card__side--back--9 {
+  background-image: linear-gradient(to right bottom, rgba(9, 9, 7, 0.85), rgba(13, 17, 16, 0.85));
+}
 .card:hover .card__side--front {
   transform: rotateY(-180deg);
 }
@@ -436,14 +438,13 @@ body {
 }
 
 .models {
-  max-width: fit-content;
-  align-content: center;
-  margin-left: 19%;
+  width: 100%;
+  overflow: hidden;
 }
 .models .model {
   float: left;
   width: 33.3333%;
-  height: 40rem;
+  height: 35rem;
   position: relative;
 }
 .models .model::after {
@@ -463,7 +464,7 @@ body {
   object-fit: cover;
   transform: scale(1.3);
   opacity: 0.9;
-  transition: all 0.2;
+  transition: all 0.2s;
 }
 .models .model__img img:hover {
   transform: scale(1);
@@ -542,7 +543,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 75%;
+  width: 65%;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
   background-color: #fff;
   display: table;
@@ -554,12 +555,13 @@ body {
 .popup__content--right {
   width: 60%;
   display: table-cell;
-  padding: 1rem 5rem;
+  padding: 1rem 3rem;
   vertical-align: middle;
   position: relative;
 }
-.popup__content--right h2 {
+.popup__content--right h3 {
   margin-bottom: 2rem;
+  font-size: 40px;
 }
 .popup__img {
   width: 100%;
@@ -579,7 +581,7 @@ body {
   transform: translateY(1rem);
 }
 .popup__buy .payment__services img {
-  width: 5rem;
+  width: 4rem;
   height: auto;
 }
 .popup__buy .payment__services img:not(:last-child) {
@@ -597,6 +599,10 @@ body {
 }
 .popup__close:hover {
   color: #cf1717;
+}
+.popup:target {
+  visibility: visible;
+  opacity: 1;
 }
 
 .slides {
@@ -674,12 +680,18 @@ body {
   margin-left: 0;
 }
 
-#r2:checked ~ .s1 {
+#r2:checked ~ .s1,
+#racing-nature-2:checked ~ .s1 {
   margin-left: -20%;
 }
 
-#r3:checked ~ .s1 {
+#r3:checked ~ .s1,
+#racing-nature-3:checked ~ .s1 {
   margin-left: -40%;
+}
+
+#racing-nature-4:checked ~ .s1 {
+  margin-left: -60%;
 }
 
 .racing-nav {
@@ -703,30 +715,13 @@ body {
   background: #028c6a;
 }
 
-#racing-nature-1:checked ~ .s1 {
-  margin-left: 0;
-}
-
-#racing-nature-2:checked ~ .s1 {
-  margin-left: -20%;
-}
-
-#racing-nature-3:checked ~ .s1 {
-  margin-left: -40%;
-}
-
-#racing-nature-4:checked ~ .s1 {
-  margin-left: -60%;
-}
-
-.services--content {
-  width: 400rem;
-  padding: 100%;
+.services-boxes .row {
+  padding: 0 8rem;
 }
 
 .service-box {
-  padding: 0.5rem;
-  font-size: 2.5rem;
+  padding: 2.5rem;
+  font-size: 1.5rem;
   color: #266f99;
   text-align: center;
   background-color: #fff;
@@ -738,7 +733,7 @@ body {
 .service-box--icon {
   font-size: 4rem;
   display: inline-block;
-  padding: 1.5rem 0 1.2rem;
+  padding: 2.8rem 0 1.2rem 0;
   margin-bottom: 0.5rem;
 }
 .service-box--title {
@@ -820,9 +815,7 @@ body {
 }
 
 .section__models {
-  padding: 5rem 0;
-  margin: none;
-  width: 250rem;
+  padding: 4rem 0;
 }
 
 .section__racing-nature {
@@ -849,12 +842,11 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  margin: 15rem;
 }
 
 .section__find-us {
   padding: 5rem 0;
-  margin-bottom: 10%;
+  margin-bottom: 1%;
 }
 .section__find-us-next {
   width: 80%;
@@ -890,6 +882,57 @@ body {
   top: 30%;
   left: 10%;
   transform: translate(-10%, -38%);
+}
+
+.footer {
+  padding: 6rem 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer__list {
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+.footer__list--title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.footer__list--item {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s;
+}
+.footer__list--item:hover {
+  color: #8de6a2;
+  transform: translateX(0.5rem);
+}
+.footer__list--link:active, .footer__list--link:link, .footer__list--link:visited {
+  color: #fff;
+  padding: 2px;
+  transition: all 0.2s;
+}
+.footer__list--link:hover {
+  color: #df4040;
+}
+
+.social-media {
+  font-size: 2.7rem;
+  padding: -10rem 0;
+}
+.social-media a {
+  color: #fff;
+}
+.social-media a:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.copyright {
+  font-size: 1.3rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #646d77;
 }
 
 /*# sourceMappingURL=style.comp.css.map */

@@ -285,6 +285,30 @@ body {
 .card__side--back--1 {
   background-image: linear-gradient(to right bottom, rgba(225, 25, 28, 0.85), rgba(211, 127, 135, 0.85));
 }
+.card__side--back--2 {
+  background-image: linear-gradient(to right bottom, rgba(243, 139, 75, 0.85), rgba(142, 76, 24, 0.85));
+}
+.card__side--back--3 {
+  background-image: linear-gradient(to right bottom, rgba(225, 226, 230, 0.85), rgba(119, 120, 123, 0.85));
+}
+.card__side--back--4 {
+  background-image: linear-gradient(to right bottom, rgba(233, 156, 58, 0.85), rgba(211, 127, 135, 0.85));
+}
+.card__side--back--5 {
+  background-image: linear-gradient(to right bottom, rgba(41, 44, 53, 0.85), rgba(109, 114, 138, 0.85));
+}
+.card__side--back--6 {
+  background-image: linear-gradient(to right bottom, rgba(174, 161, 148, 0.85), rgba(159, 136, 113, 0.85));
+}
+.card__side--back--7 {
+  background-image: linear-gradient(to right bottom, rgba(252, 253, 252, 0.85), rgba(150, 183, 222, 0.85));
+}
+.card__side--back--8 {
+  background-image: linear-gradient(to right bottom, rgba(228, 228, 231, 0.85), rgba(79, 82, 88, 0.85));
+}
+.card__side--back--9 {
+  background-image: linear-gradient(to right bottom, rgba(9, 9, 7, 0.85), rgba(13, 17, 16, 0.85));
+}
 .card:hover .card__side--front {
   transform: rotateY(-180deg);
 }
