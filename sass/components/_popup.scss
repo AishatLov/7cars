@@ -19,6 +19,7 @@
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         background-color: $color-white;
         display: table;
+        transition: all .3s .2s;
 
         &--left{
             width: 40%;      

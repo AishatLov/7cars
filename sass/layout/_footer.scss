@@ -15,7 +15,7 @@
     }
 
     &--item{
-        font-size: 1.4rem;
+        font-size: 1.1rem;
         margin-bottom: .5rem;
         transition: all .3s;
 
@@ -50,6 +50,9 @@
         margin-right: 2rem;
     }
   }
+a:hover {
+    color: $color-gold;
+}
 }
 
 .copyright{

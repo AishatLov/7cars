@@ -38,14 +38,7 @@
 .section__services{
     &--content{
         padding: 10rem 0;        
-        background-image: linear-gradient(
-            to right bottom,
-            rgba($color-green, .8),
-            rgba($color-blue, .8) 
-        ), url(../../img/home/services/5.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @include backgroundCar();
     }
 }
 

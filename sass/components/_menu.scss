@@ -1,0 +1,54 @@
+.main-navigation {
+    &__icon-box{
+        position: fixed;
+        top: 2rem;
+        right: 5rem;
+        background-color: $color-white;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        z-index: 600;
+    }
+
+    &__icon{
+        margin-top: 2.3rem;
+        margin-left: 1rem;
+        position: relative;
+
+        &,
+        &::before,
+        &::after{
+            display: inline-block;
+            width: 3rem;
+            height: .2rem;
+            background-color: $color-green;
+            border-radius: $border-radius-small;
+        }
+       
+
+        &::before,
+        &::after{
+            content: "";
+            position: absolute;
+            left: 0;
+        }
+
+        &::before{
+            top: -.6rem;
+        }
+
+        &::after{
+            top: .6rem;
+        }
+    }
+}
+
+.nav__bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    @include backgroundCar();
+    z-index: 300;
+}
