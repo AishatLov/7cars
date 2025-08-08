@@ -2,6 +2,10 @@
    width: 85%;
    margin: auto;
 
+   @include responsiveness(pixelToEm(900)){
+            width: 100%;            
+        }
+
    &__group:not(:last-child){
     margin-bottom: 4rem;
    }

@@ -22,3 +22,17 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+
+@mixin backgroundFixer(){
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@mixin responsiveness($screen-width) {
+    @media only screen and (max-width: $screen-width) {
+        @content;
+    }
+}

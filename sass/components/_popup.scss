@@ -18,8 +18,13 @@
         width: 65%;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         background-color: $color-white;
+        transform: translate(-50%, -50%) scale(.5);
         display: table;
         transition: all .3s .2s;
+        @include responsiveness(pixelToEm(800)){
+            top: 40%;
+
+        }
 
         &--left{
             width: 40%;      
@@ -37,6 +42,9 @@
             h3{
                 margin-bottom: 2rem;
                 font-size: 40px;
+                @include responsiveness(pixelToEm(1100)){
+                    font-size: 3rem;
+                }
 
             }
         }
@@ -53,25 +61,43 @@
         margin-bottom: 4rem;
     }
 
-    &__buy{
+    &__buy {
+    display: inline-block;
+
+    .btn,
+    .btn::after {
+        @include responsiveness(pixelToEm(1100)) {
+            font-size: 1rem 2rem; // Set a single font size
+        }
+    }
+
+    .payment__services {
         display: inline-block;
+        margin-left: 2rem;
+        padding: .5rem 1rem;
+        transform: translateY(1rem);
+        @include responsiveness(pixelToEm(900)){
+            margin-left: 1.2rem;
+            padding: 0.5rem 0.2rem;
+        }
+        @include responsiveness(pixelToEm(920)){
+            margin-left: .5rem;
+            padding: .5rem 0;
+        }
+        @include responsiveness(pixelToEm(800)) {
+            display: none; // Confirm this is intended
+        }
 
-        .payment__services{
-            display: inline-block;
-            margin-left: 2rem;
-            padding: .5rem 1rem;
-            transform: translateY(1rem);
+        img {
+            width: 4rem;
+            height: auto;
 
-            
-            img{
-                width: 4rem;
-                height: auto;
-                &:not(:last-child){
-                    margin-right: 1rem;
-                }
+            &:not(:last-child) {
+                margin-right: 1rem;
             }
         }
     }
+}
 
     &__close{
             &:link,

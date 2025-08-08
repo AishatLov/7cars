@@ -26,6 +26,10 @@
             -webkit-shape-outside: circle(50% at 50% 50%);
             shape-outside: circle(50% at 50% 50%);
             transform: translateX(-2rem,) translateY(2rem);
+
+            @include responsiveness(pixelToEm(600)){
+                transform: translateX(-3rem) translateY(0);
+            }
         }
 
             img{
@@ -41,6 +45,9 @@
 
             &--text{
                 font-size: 1.8rem;
+                @include responsiveness(pixelToEm(650)){
+                    font-size: 1.3rem;
+                }
             }
 
             &--owner{

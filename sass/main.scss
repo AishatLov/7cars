@@ -1,4 +1,5 @@
 // Abstracts
+@import "abstracts/functions";
 @import "abstracts/variables";
 @import "abstracts/mixins";
 
@@ -25,8 +26,15 @@
 @import "components/testimonial";
 
 
+// show page components
+@import "components/down-arrow";
+@import "components/description-box";
+@import "components/car-specs";
+
+
 // Pages
 @import "pages/home";
+@import "pages/show";
 
 // Layout
 @import "layout/header";

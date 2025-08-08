@@ -1,3 +1,82 @@
+.cards{
+  .row{
+    [class="col-1-of-3"]{
+        @include responsiveness(pixelToEm(900)){
+            width: calc((100% - #{$gutter-horizontal})/2);
+            &:not(:last-child){
+                margin-bottom: 2rem;
+            }
+            &:nth-last-of-type(2n){
+                margin-right: 0;
+            }
+        }
+        @include responsiveness(pixelToEm(600)){
+            width: 100%;
+            margin-right: 0 !important;      
+            
+        }
+     }
+
+        [class="col-1-of-3"]:last-child{
+        @include responsiveness(pixelToEm(900)){
+        width: 100%;
+        .card{
+            height: 32rem;
+
+            &__side{
+                height: 32rem;
+                box-shadow: 0 2rem 4rem rgba($color-black, .5);
+
+                &--front{
+                    display: grid;
+                    grid-template-columns: 60% 40%;
+                    &--image-box{
+                        width: 100%;
+                        clip-path: none;
+                        margin-bottom: 0;                    
+                    }
+
+                    &-image{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        margin-bottom: -4rem;
+                    }
+                }
+
+                &--back{
+                    .back-main{
+                        &__text{
+                            margin-bottom: 0;
+                        }
+                        &__price{
+                            margin-bottom: 1rem;
+                        }
+                    }
+                }
+            }
+         }
+
+        }
+
+        @include responsiveness(pixelToEm(600)){
+            .card{
+                height: 50rem;
+                &__side{
+                    height: 50rem;
+                    &--front{
+                        grid-template-columns: 100%;
+                        &-description{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+      }    
+    } 
+}
+
 .card{
     font-size: $default-font-size;
     height: 50rem;
@@ -6,6 +85,16 @@
     transition: all .7s;
     -moz-perspective: 150rem;
     perspective: 150rem;
+
+    @include responsiveness(pixelToEm(900)){
+        height: 62.5rem;
+    }
+
+    @include responsiveness(pixelToEm(600)){
+        height: 71.5rem;
+    }
+
+    
 
     &__side{
         width: 100%;
@@ -19,6 +108,12 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         transition: all .7s;
+        @include responsiveness(pixelToEm(900)){
+            height: 62.5rem;
+        }
+        @include responsiveness(pixelToEm(600)){
+            height: 71.5rem;
+        }
 
         &--front{
             &-image-box{

@@ -8,6 +8,12 @@
 
 .section__in-demand{
     padding: 0 0 4rem 0;
+    @include responsiveness(pixelToEm(1250)){
+        padding: 0 6rem 4rem 6rem;
+    }
+    @include responsiveness(pixelToEm(900)){
+        padding: 0 2rem 4rem 2rem;
+    }
 }
 
 .section__models{
@@ -33,6 +39,11 @@
 
         }
     }
+    @include responsiveness(pixelToEm(850)){
+        .navigation{
+            bottom: 50%;
+        }
+    }   
 }
 
 .section__services{
@@ -60,6 +71,10 @@
         margin-left: 5%;
         margin-right: 5%;
         border-radius: 0.3%;
+        @include responsiveness(pixelToEm(720)){
+            height: 60vh;
+           
+        }
     }
 }
 

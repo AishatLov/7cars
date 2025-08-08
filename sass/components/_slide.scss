@@ -24,24 +24,37 @@
             position: absolute;
             top: 5%;
             left: 3%;
-            padding: 0 3rem;
+            padding: 0 1rem;
             background: none;
 
             p{
                 font-size: 5rem;
                 font-weight: 800;
                 @include twoColorGradientText($color-green, $color-blue);
+                @include responsiveness(pixelToEm(750)){
+                    font-size: 4rem;
+                }
 
+                @include responsiveness(pixelToEm(450)){
+                    font-size: 3.5 rem;
+                }
             }
 
             &-icons{
                 position: absolute;
                 top: 18%;
                 left: 3%;
-                background-color: $color-white;
-                padding: 2rem 4rem 2rem 2rem;
-                margin: auto;
+                background-color: none;
+                padding: 0 1rem;
+                margin-top: 7rem;
                 border-radius: 3px;
+                @include responsiveness(pixelToEm(750)){
+                    top: 16%;
+                }
+
+                 @include responsiveness(pixelToEm(700)){
+                    top: 70%;
+                }
 
                 span{
                     font-size: 2rem;

@@ -1,0 +1,21 @@
+.see-more{
+    font-size: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1.1%;
+    left: 50%;
+    padding-top: .6rem;
+    padding-left: .2rem;
+    padding-right: .3rem;
+    transform: translateX(-40%);
+    background-color: #5f7192;
+
+    a{
+        color: $color-white;
+        padding: 0rem 1rem;
+        padding-top: 5rem;
+        margin-top: 2rem;
+    }
+}

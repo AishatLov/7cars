@@ -7,7 +7,14 @@
     &__text-box{
         position: absolute;
         top: 30%;
+        padding-top: 10rem;
         left: 10%;
         transform: translate(-10%, -38% );
+        @media only screen and (max-width: 720px){
+            padding: 3rem;
+        }
+        @media only screen and (max-width: 500px){
+            margin-top: 8rem;
+        }
     }
 }

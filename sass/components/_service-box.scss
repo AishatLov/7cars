@@ -1,6 +1,29 @@
 .services-boxes{
     .row{
         padding: 0 8rem;
+
+        [class="col-1-of-4"]{
+            @include responsiveness(pixelToEm(980)){
+                width: calc((100% - #{$gutter-horizontal})/2);
+
+                &:not(:last-child){
+                    margin-bottom: 6rem;
+                }
+                
+                &:nth-of-type(2n){
+                    margin-right: 0;
+                }
+            } 
+            
+            @include responsiveness(pixelToEm(600)){
+                    width: 100%; 
+                    margin-right: 0 !important;   
+                }
+        }
+
+        @include responsiveness(pixelToEm(600)){
+            padding: 0 10%;
+        }
     }
 }
 
@@ -26,10 +49,18 @@
         text-transform: uppercase;
         font-size: $default-font-size;
         font-weight: 700;
+        @include responsiveness(pixelToEm(600)){
+            font-size: 2.2rem;
+        }
     }
 
     &--description{
         text-align: justify; 
+        font-size: 1.4rem;
+        @include responsiveness(pixelToEm(600)){
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
     }
 
     &:hover{
